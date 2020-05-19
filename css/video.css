@@ -1,0 +1,108 @@
+/* CSS Document */
+*{
+	margin: 0;
+	padding: 0;
+	font-family: century Gothic;
+}
+body{
+	background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(../first.jpg);
+	background-size: 100% 800px;
+	
+	background: #022045;
+}
+header{
+		/*background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(../first.jpg);
+		*/height:40vh;
+}
+
+	ul{
+		float: right;
+		list-style-type: none;
+		margin-top: 30px;
+}		
+ul li{
+	   display: inline-block;
+
+}
+ul li a{
+	text-decoration: none;
+	color: #fff;
+	padding:7px 21px;
+	border: 1px bold #fff;
+	transition: 0.4s ease;
+}
+ul li a:hover{
+	background-color: #fff;
+	color:#000;
+}
+ul li.active a{
+				background-color: #fff;
+	            color:#000;
+	
+}		
+.logo img{
+			float: left;
+			width: 150px;
+			height: auto;
+			background-color: white;
+			margin-top: 5px;
+			margin-left: 6px;
+			border-radius: 200px; 	
+}		
+.main{
+		max-width: 1600px;
+		margin: auto;
+}
+.title{
+		position : absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+
+}	 
+.title h1{
+			color: #fff;
+			font-size: 60px;
+
+}
+.button{
+		top: 20%;
+		left: 10%;
+		width: 100%
+}
+.video{
+	float: left;
+	border: 2px solid white;
+}
+#v1{
+	width: 30%;
+	height: 250px;
+	border: 8px solid #ccc;
+	border-radius: 5px;
+	margin-left: 25px; 
+}
+#v2{
+	width: 30%;
+	height: 250px;
+	border: 8px solid #ccc;
+	border-radius: 5px;
+	margin-left: 10px; 
+}
+#v3{
+	width: 30%;
+	height: 250px;
+	border: 8px solid #ccc;
+	border-radius: 5px;
+	margin-left: 10px; 
+}
+.btn{
+		border: 1px bold #fff;
+		padding: 10px 30px;
+		color: #fff;
+		text-decoration: none;
+
+}
+.btn:hover{
+			background-color: #fff;
+	        color: blue;
+}

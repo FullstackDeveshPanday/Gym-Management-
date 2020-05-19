@@ -1,0 +1,165 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <style>
+    body {
+    font-family: Arial, Helvetica, sans-serif;
+    }
+    * {
+    box-sizing: border-box;
+    }
+    input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid blue;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    font-color: White;
+    }
+    input[type=submit] {
+    background-color: black;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    opacity:0.5;
+    }
+    input[type=submit]:hover {
+    background-color:green;
+    }
+    .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(../2.jpg);
+    }
+    .column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+    font: white;
+    }
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+    @media screen and (max-width: 600px) {
+    .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+    }
+    }
+    @media screen and (max-width: 900px) {
+    .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+    }
+    }
+    @media screen and (max-width: 1200px) {
+    .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+    }
+    }
+    label{
+      color: white;
+    }
+    </style>
+    <script>
+
+       function Validatepass(inputtext)
+          {
+            var pregg = /^[0-9a-zA-Z]/;
+            if(inputtext.value.match(pregg))
+            {
+              document.form.n1.focus();
+               alert('Name is correct');
+              return true;
+            }
+            else
+            {
+              alert("Nmae should be A-Z to a-z");
+              document.form.n1.focus();
+              return false;
+            }
+          }
+    
+
+
+    function ValidateEmail(input)
+          {
+            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if(input.value.match(mailformat))
+            {
+              document.form.n2.focus();
+              alert('email is valid');
+              return true;
+            }
+            else
+            {
+              alert("You have entered an invalid email address!");
+              document.form.n2.focus();
+              return false;
+            }
+          }
+
+
+      function Validatecmt(inputtext)
+          {
+            var pregg = /^[0-9a-zA-Z]/;
+            if(inputtext.value.match(pregg))
+            {
+              document.form.n3.focus();
+               alert('Your comment Thankful');
+              return true;
+            }
+            else
+            {
+              alert("Special charecter not allowed");
+              document.form.n3.focus();
+              return false;
+            }
+          }
+         
+
+
+    </script>
+  </head>
+  <body onload='document.form.n1.focus(),document.form.n2.focus(),document.form.n3.focus()'>
+    <div class="container">
+      <div>
+        
+        <a href="index.html">
+        <i class="fas fa-chevron-circle-left" style="font-size: 40px;color: #ff7909;"></i></a>
+        <h2 style="text-align:center;color: white;">Give Feedback</h2>
+      </div>
+      <div class="row">
+        <div class="column">
+          <img src="F:\Project\3.jpg" style="width:100%">
+        </div>
+        <div class="column">
+          <form name="form" action="#" method="post" id="form2">
+            <label for="fname" font=white>First Name</label>
+            <input type="text" name="firstn"  id="n1" placeholder="Your name..">
+            <label for="lname">E-mail</label>
+            <input type="text" name="uname" id="n2" placeholder="Your E-mail..">
+            <label for="country">State</label>
+            <select id="country" name="country">
+              <option value="australia">--Select--</option>
+              <option value="pune">Pune</option>
+              <option value="mp">M.P.</option>
+              <option value="up">U.P.</option>
+            </select>
+            <label for="subject">Subject</label>
+            <textarea  name="Address" id="n3" placeholder="Write Your comment..." style="height:170px"></textarea>
+            <input type="submit" value="Submit" name="submit" onclick="Validatepass(document.form.n1),ValidateEmail(document.form.n2),Validatecmt(document.form.n3)">
+          </form>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>

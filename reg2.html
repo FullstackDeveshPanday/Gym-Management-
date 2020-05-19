@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>Anytime fitness</title>
+		<link rel="stylesheet" type="text/css" href="css/reg2.css">
+		<script>
+		function Validatepass(inputtext)
+		{
+		var pregg = /^[0-9a-zA-Z]/;
+		if(inputtext.value.match(pregg))
+		{
+		document.form.n1.focus();
+		alert('Name is correct');
+		return true;
+		}
+		else
+		{
+		alert("Name should be A-Z to a-z");
+		document.form.n1.focus();
+		return false;
+		}
+		}
+		
+		function Validatelast(inputtext)
+		{
+		var pregg = /^[0-9a-zA-Z]/;
+		if(inputtext.value.match(pregg))
+		{
+		document.form.n4.focus();
+		alert(' Last name is correct');
+		return true;
+		}
+		else
+		{
+		alert("Last name should be A-Z to a-z");
+		document.form.n4.focus();
+		return false;
+		}
+		}
+		
+		function ValidateEmail(input)
+		{
+		var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+		if(input.value.match(mailformat))
+		{
+		document.form.n2.focus();
+		alert('email is valid');
+		return true;
+		}
+		else
+		{
+		alert("You have entered an invalid email address!");
+		document.form.n2.focus();
+		return false;
+		}
+		}
+
+		function Validatephone(inputtext)
+		{
+			var pregg = /^\d{10}$/;
+			if(inputtext.value.match(pregg))
+			{
+			document.form.n5.focus();
+			alert('Mobile Number is correct...!');
+			return true;
+			}
+			else
+			{
+			alert("Mobile Number Start with [6,7,8,9] ,Compulsery");
+			document.form.n5.focus();
+			return false;
+			}
+		}
+
+
+
+		function Validatep(inputtext)
+		{
+			var pregg = /^[0-9a-zA-Z]+$/;
+			if(inputtext.value.match(pregg))
+			{
+			document.form.n3.focus();
+			alert('Password is correct...!');
+			return true;
+			}
+			else
+			{
+			alert("Password Start with [A-Z,a-z @ # $ % 6,7,8,9] ,Compulsery");
+			document.form.n3.focus();
+			return false;
+			}
+		}
+		/*function Validate()
+		{
+			var pass=document.getElementById('n3').value;
+			var cpas=document.getElementById('n6').value;
+
+			var pm=/^[0-9a-zA-Z]/+$;
+			if (pass==null || pass.match(pm) || pass.lenght<8) {
+				alert('Allow a-z A-Z and Special char');
+				document.form.n3.focus();
+				return false;
+			}
+			if (cpas==null || cpas!=pass) {
+				alert('your password is not similler With second filled...!');
+				document.form.n3.focus();
+			}
+			return true;
+		}*/
+		
+		</script>
+		
+	</head>
+	<body onload='document.form.n1.focus(),document.form.n4.focus(),document.form.n2.focus(),document.form.n3.focus(),document.form.n5.focus()'>
+		<header>
+			<div class="main">
+				<div class="logo">
+					<img src="12.png">
+				</div>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="gallery.html">Gallery</a></li>
+					<li><a href="#">Why Join</a></li>
+					<li><a href="#">Trainning</a></li>
+					<li><a href="contac.html">Feedback</a></li>
+					
+				</ul>
+			</div>
+		</header>
+		<div class="button">
+			<h1>MEMBERSHIP FORM</h1>
+			<form action="" method="post" name="form" id="form2">
+				<div class="video" id="v1">
+					<label for="first">FirstName:</label><br>
+					<input type="text" id="n1" name="First_Name" maxlength="30" placeholder="Enter the First_Name" />
+					<label>Mobile-No:</label>
+					<input type="text"id="n5" name="phone" maxlength="10" placeholder="Enter the Mobile_Number" />
+					<label>Gender:</label>
+					<select style="width: 310px;">
+						<option value="">Select-Gender:</option>
+						<option value="">Male</option>
+						<option value="">Female</option>
+						<option value="">Transender</option>
+					</select>
+				</div>
+				<div class="video" id="v2">
+					<label for="first">LastName:</label><br>
+					<input type="text" id="n4" name="Last_Name" maxlength="30" placeholder="last name" />
+					<label for="cnf">Password:</label>
+					<input type="password" id="n3" name="" placeholder="Enter your password...!">
+					<label for="Pin">Pin-code:</label>
+					<input type="text" name="Pin_Code" maxlength="6" placeholder="Enter the Pin-code" />
+					<button type="submit" value="Submit" name="submit" onclick="Validatepass(document.form.n1),Validatelast(document.form.n4),ValidateEmail(document.form.n2),Validatephone(document.form.n5),validatep(document.form.n3)">SUBMIT</button>
+					<button type="reset" class="set">RESET</button>
+				</div>
+				<div class="video" id="v3">
+					<label for="first">Email-Id:</label><br>
+					<input type="text" name="Email_Id" id="n2" maxlength="100" placeholder="Enter your Email...!"/>
+					<label for="cnf">Address:</label>
+					<input type="text" id="n6" name="pass" placeholder="Enter Confirm-Pass...!">
+					<label>Course Applied:</label>
+					<select  style="width: 310px;">
+						<option value="">Select-Course</option>
+						<option value="">3 Month</option>
+						<option value="">6 Month</option>
+						<option value="">1 Year</option>
+					</select>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>

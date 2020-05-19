@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>Anytime fitness</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="main">
+        <div class="logo">
+          <a href="index.html"><img src="12.png" ></a>
+        </div>
+        <ul>
+          <li><a href="index.html" class="home">Home</a></li>
+          <li><a href="personal.html">Gallery</a></li>
+          <li><a href="whyjoin.html" class="why">Why Join</a></li>
+          <li><a href="#">Trainning</a></li>
+          <li><a href="contac.html">Feedback</a></li>
+          
+        </ul>
+      </div>
+      <div class="title">
+        <h1>STAY FIT GO ALIVE</h1>
+      </div>
+      <div class="button">
+        <a href="video.html" class="btn">watch video</a>
+        
+      </div>
+    </header>
+    <footer>
+      <body onload='document.form.n1.focus(),document.form.n2.focus()'>
+        <script>
+       /* function login()
+        {
+        var uname=document.getElementById("n1").value;
+        var pass=document.getElementById("n2").value;
+        var validname= /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})+$/;
+        var pas=/^[0-8a-zA-Z]+$/;
+
+*/
+        function ValidateEmail(input)
+          {
+            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if(input.value.match(mailformat))
+            {
+              document.form.n1.focus();
+              alert('email is valid');
+              return true;
+            }
+            else
+            {
+              alert("You have entered an invalid email address!");
+              document.form.n1.focus();
+              return false;
+            }
+          }
+
+
+
+          function Validatepass(inputtext)
+          {
+            var pregg = /^[A-Za-z]/;
+            if(inputtext.value.match(pregg))
+            {
+              document.form.n2.focus();
+               alert('password is valid');
+              return true;
+            }
+            else
+            {
+              alert("You have entered an invalid password!");
+              document.form.n2.focus();
+              return false;
+            }
+          }
+
+
+
+       /* if(uname==null || uname.match(validname))
+        {
+        alert("User name a-z  A-Z only ");
+        }
+        else
+        {
+        alert("User Email is Correct...!");
+        }
+        
+        if(pass.match(pas) || pass.length<8)
+        {
+        alert("length should be greater than 9 and should have a captial letter And Special ");
+        }
+        else
+        {
+        alert("password is  successfully ");
+        }
+        }*/
+        </script>
+        <button class="open-button" onclick="openForm()">Signin/Signup</button>
+        <div class="form-popup" id="myForm">
+          <form class="form-container" name="form" action="#" method="post">
+            <h1 color="white">Login Here</h1>
+            <label for="email"><b>Email</b></label>
+            <input type="text" id="n1" placeholder="Enter Email" name="email" >
+            <label for="psw"><b>Password</b></label>
+            <input type="password" id="n2" placeholder="Enter Password" name="psw">
+            <button type="submit" name="submit" class="btn"  onclick="ValidateEmail(document.form.n1),Validatepass(document.form.n2)">Login</button>
+            <button type="submit" class="btn">Cancel</button>
+            
+            <button type="submit" class="btn1"  hr><a href="..//Project/reg2.html"> Get Membership</a></button>
+            <button type="button" class="btn1 cancel" onclick="closeForm()">Close</button>
+          </form>
+        </div>
+        <div class="footer">
+          <div class="foot" id="f1">
+            <h2><i class="fas fa-skating" style="color: white; font-size: 50px;margin-right: 20px;"></i>GO FiT </h2>
+            <li class="font"><i class="fab fa-facebook"></i> Like us</li>
+            <li class="font"><i class="fab fa-instagram"> follow us</i></li>
+            <li class="font"><i class="fab fa-google"></i> search on</li>
+            <li class="font"><i class="fab fa-linkedin"> Linkedin</i></li>
+            <li class="font"><i class="fab fa-twitter"> Twitter</i>
+            </div>
+            <div class="foot" id="f2">
+              <p>FOR EVERYONE</p>
+              <li class="company">OUR GYMS </li>
+              <li class="company">EVENTS</li>
+              <li class="company">DAILY WORKOUT</li>
+              <li class="company">QUICK BUY: MEMBERSHIP</li>
+            </div>
+            <div class="foot" id="f3">
+              <p >GYMS </p>
+              <li class="company">Find Gym</li>
+              <li class="company">Own Gym</li>
+              <li class="company">OUR TEAM</li>
+              <li class="company">JOIN TODAY</li>
+            </div>
+            <div class="foot" id="f4">
+              <p></p>
+              <li class="company">Contact Us</li>
+              <li class="company">Call-7398683627</li>
+              <li class="company">E-mail-deveshpandey96@gmail.com</li>
+            </div>
+          </div>
+          <script>
+          function openForm() {
+          document.getElementById("myForm").style.display = "block";
+          }
+          function closeForm() {
+          document.getElementById("myForm").style.display = "none";
+          }
+          </script>
+        </footer>
+      </body>
+    </html>
